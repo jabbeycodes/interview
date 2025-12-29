@@ -179,7 +179,7 @@ async def upload_resume(file: UploadFile = File(...)):
 
         # Update skills
         if parsed.get("skills"):
-            from .models import Skill, SkillLevel
+            from models import Skill, SkillLevel
             profile.skills = [
                 Skill(name=skill, level=SkillLevel.INTERMEDIATE)
                 for skill in parsed["skills"]
