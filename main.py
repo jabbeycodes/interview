@@ -13,6 +13,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from config import get_settings, TONE_PRESETS, LENGTH_PRESETS, INDUSTRY_PRESETS, ROLE_PRESETS
 from models import (
     UserProfile, SessionPrep, UserSettings, AnswerSettings,
