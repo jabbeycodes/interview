@@ -6,9 +6,6 @@ import asyncio
 from typing import Optional, AsyncGenerator, Callable
 from datetime import datetime
 import openai
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import get_settings
 from models import TranscriptSegment, SpeakerType
 
