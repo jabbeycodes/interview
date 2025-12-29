@@ -4,6 +4,9 @@ Answer generation service using GPT-4
 import json
 from typing import Optional, List, Dict
 import openai
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import get_settings, TONE_PRESETS, LENGTH_PRESETS, INDUSTRY_PRESETS, ROLE_PRESETS
 from models import (
     DetectedQuestion, GeneratedAnswer, UserProfile, SessionPrep,

@@ -4,6 +4,9 @@ Question detection service - identifies interview questions from transcript
 import re
 from typing import List, Optional, Tuple
 from datetime import datetime
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models import TranscriptSegment, DetectedQuestion, SpeakerType
 
 
